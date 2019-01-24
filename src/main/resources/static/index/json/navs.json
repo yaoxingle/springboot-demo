@@ -1,0 +1,84 @@
+[
+{
+	"title" : "发布订阅管理",
+	"icon" : "icon-fabu",
+	"href" : "",
+	"spread" : false,
+	"children" : [
+		{
+			"title" : "主题管理",
+			"icon" : "icon-zhuti",
+			"href" : "/action/view?name=topic/list",
+			"spread" : false
+		},
+		{
+			"title" : "生产者管理",
+			"icon" : "icon-shengchan",
+			"href" : "page/login/login.html",
+			"spread" : false
+		},
+		{
+			"title" : "消费者管理",
+			"icon" : "icon-xiaofeizhedongcha",
+			"href" : "page/login/login.html",
+			"spread" : false
+		}
+	]
+},{
+	"title" : "监控告警",
+	"icon" : "icon-jiankong",
+	"href" : "",
+	"spread" : false,
+	"children" : [
+		{
+			"title" : "主题查询",
+			"icon" : "icon-chaxun",
+			"href" : "page/404.html",
+			"spread" : false
+		},
+		{
+			"title" : "主题监控",
+			"icon" : "icon-jiankong",
+			"href" : "page/login/login.html",
+			"spread" : false
+		},
+		{
+			"title" : "集群管理",
+			"icon" : "icon-jiqunguanli",
+			"href" : "page/login/login.html",
+			"spread" : false
+		},
+		{
+			"title" : "消费速率",
+			"icon" : "icon-sudu",
+			"href" : "page/login/login.html",
+			"spread" : false
+		},
+		{
+			"title" : "消费堆积",
+			"icon" : "icon-interrupt",
+			"href" : "page/login/login.html",
+			"spread" : false
+		}
+	]
+},
+{
+	"title" : "统计分析",
+	"icon" : "icon-tongji",
+	"href" : "",
+	"spread" : false,
+	"children" : [
+		{
+			"title" : "统计分析",
+			"icon" : "icon-fenxi",
+			"href" : "page/404.html",
+			"spread" : false
+		},
+		{
+			"title" : "源端数据分析",
+			"icon" : "&#xe609;",
+			"href" : "page/login/login.html",
+			"spread" : false
+		}
+	]
+}]

@@ -1,0 +1,7 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="header (title)">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title th:replace="${title}"></title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+</head>

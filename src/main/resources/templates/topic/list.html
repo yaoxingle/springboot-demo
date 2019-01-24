@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/common/base::header(~{::title})">
+	<title>主题列表</title>
+</head>
+<body>
+ 
+<table class="layui-hide" id="test" lay-filter="test"></table>
+ 
+<script type="text/html" id="toolbarDemo">
+  <div class="layui-btn-container">
+       &nbsp;&nbsp;模糊查询
+	   <div class="layui-inline">
+    		<input class="layui-input" name="id" id="demoReload" autocomplete="off">
+  	   </div>
+    <button class="layui-btn layui-btn-sm" lay-event="topicAdd">新增</button>
+    <button class="layui-btn layui-btn-sm" lay-event="topicDelete">删除</button>
+    <button class="layui-btn layui-btn-sm" lay-event="topicUpdate">修改</button>
+  </div>
+</script>
+ 
+<script type="text/html" id="barDemo">
+  <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+          
+<script type="text/javascript" th:src="@{/layui/layui.all.js}"></script>
+<script type="text/javascript" th:src="@{/topic/list.js}"></script>
+</body>
+</body>
+</html>

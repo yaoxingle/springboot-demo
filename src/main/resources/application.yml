@@ -1,0 +1,33 @@
+#server:
+#  port: 8080
+#  servlet:
+#    context-path: /message
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:informix-sqli://192.168.14.107:9088/sg_db_test:INFORMIXSERVER=gbaseserver1;CLIENT_LOCALE=zh_cn.utf8;DB_LOCALE=zh_cn.utf8;NEWCODESET=utf-8,8859-1,819;ifx_lock_mode_wait=100;DELIMIDENT=y
+    driver-class-name: com.informix.jdbc.IfxDriver
+    username: informix
+    password: informix
+    dbcp2:
+      min-idle: 10
+      initial-size: 10
+      max-total: 10
+      max-wait-millis: 1000
+#  使用thymeleaf不用jsp
+#  mvc:
+#   view:
+#      prefix: /WEB-INF/jsp/
+#      suffix: .jsp
+  thymeleaf:
+    cache: false
+#日志配置
+logging:
+  level:
+    root: info
+  path: ${user.dir}/logs/
+#mybatis配置 其余使用预定项即可
+mybatis:
+  mapper-locations:
+  - classpath:mapper/*.xml
+  type-aliases-package: com.tellhow.cloud.message.vo

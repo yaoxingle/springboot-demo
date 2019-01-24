@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/common/base::header(~{::title})">
+	<title>主题详细</title>
+</head>
+<body>
+	<form class="layui-form" action="" style="margin: 20px 15px;">
+	  <div class="layui-form-item">
+	    <label class="layui-form-label">主题名</label>
+	    <div class="layui-input-block">
+	      <input type="text" name="title" lay-verify="required" autocomplete="off" placeholder="请输入主题名" class="layui-input">
+	    </div>
+	  </div>
+	  
+	  <div class="layui-form-item">
+	    <label class="layui-form-label">主题类型</label>
+	    <div class="layui-input-block">
+	      <select name="interest" lay-filter="aihao">
+	        <option value=""></option>
+	        <option value="0" selected="">有序</option>
+	        <option value="1">无序</option>
+	      </select>
+	    </div>
+	  </div>
+	  
+	  <div class="layui-form-item">
+	    <label class="layui-form-label">公司名</label>
+	    <div class="layui-input-block">
+	      <select name="interest" lay-filter="aihao">
+	        <option value=""></option>
+	        <option value="0" selected="">泰豪</option>
+	        <option value="1">南瑞</option>
+	        <option value="1">科东</option>
+	      </select>
+	    </div>
+	  </div>
+  	
+  	  <div class="layui-form-item">
+	    <label class="layui-form-label">应用名</label>
+	    <div class="layui-input-block">
+	      <input type="text" name="title" lay-verify="required" autocomplete="off" placeholder="请输入应用名" class="layui-input">
+	    </div>
+	  </div>
+	  
+	  <div class="layui-form-item">
+	    <label class="layui-form-label">主题描述</label>
+	    <div class="layui-input-block">
+	      <input type="text" name="title" lay-verify="required" autocomplete="off" placeholder="请输入主题描述" class="layui-input">
+	    </div>
+	  </div>
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit="" lay-filter="demo1">提交</button>
+    </div>
+  </div>
+</form>
+</body>
+<script type="text/javascript" th:src="@{/layui/layui.js}"></script>
+<script>
+layui.use(['form'], function(){
+	  var form = layui.form
+	  ,layer = layui.layer
+	  ,layedit = layui.layedit
+	  ,laydate = layui.laydate;
+	  
+});
+</script>
+</html>
