@@ -6,7 +6,7 @@
     "askTime" : "2017-05-27 12:50",
     "msgReply" : [{
         "userface" : "../../images/face.jpg",
-        "userName" : "请叫我马哥",
+        "userName" : "admin",
         "userAsk" : "用的layui，贤心大神开发的前端框架",
         "askTime" : "2017-05-27 13:50"
     }]
@@ -32,7 +32,7 @@
     "askTime" : "2017-05-27 12:50",
     "msgReply" : [{
         "userface" : "../../images/face.jpg",
-        "userName" : "请叫我马哥",
+        "userName" : "admin",
         "userAsk" : "这个貌似和技术无关吧，难道你想给我当老婆，呵呵。。。",
         "askTime" : "2017-05-27 13:50"
     }]

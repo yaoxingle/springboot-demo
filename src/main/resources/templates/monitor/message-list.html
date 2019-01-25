@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/common/base::header(~{::title})">
+	<title>主题列表</title>
+</head>
+<body>
+ 
+<table class="layui-hide" id="test" lay-filter="test"></table>
+ 
+<script type="text/html" id="toolbarDemo">
+  <div class="layui-btn-container">
+	     主题：
+  	<div class="layui-inline">
+    	<input class="layui-input" placeholder="请输入主题" name="id" id="demoReload" autocomplete="off">
+  	</div>
+	KEY：
+  	<div class="layui-inline">
+    	<input class="layui-input" placeholder="请输入key" style="width:100px" name="id" id="demoReload" autocomplete="off">
+  	</div>
+	生产者IP：
+  	<div class="layui-inline">
+    	<input class="layui-input" style="width:130px" placeholder="请输入ip" name="id" id="demoReload" autocomplete="off">
+  	</div>
+	开始时间：
+  	<div class="layui-inline">
+    	<input type="text" class="layui-input" placeholder="请选择时间"  id="startTime">
+  	</div>
+	结束时间：
+  	<div class="layui-inline">
+    	<input type="text" class="layui-input" placeholder="请选择时间"  id="endTime">
+  	</div>
+  	<button class="layui-btn" data-type="reload">搜索</button>
+  </div>
+</script>
+          
+<script type="text/javascript" th:src="@{/layui/layui.all.js}"></script>
+<script type="text/javascript" th:src="@{/monitor/message-list.js}"></script>
+</body>
+</body>
+</html>

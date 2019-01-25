@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/common/base::header(~{::title})">
+	<title>主题列表</title>
+</head>
+<body>
+ 
+<table class="layui-hide" id="test" lay-filter="test"></table>
+ 
+<script type="text/html" id="toolbarDemo">
+  <div class="layui-btn-container">
+       &nbsp;&nbsp;
+	   主题：<div class="layui-inline">
+    		<input class="layui-input" placeholder="请输入主题"  name="id" id="demoReload" autocomplete="off">
+  	   </div>
+               消息流量阀值：<div class="layui-inline">
+    		<input class="layui-input" placeholder="请输入流量阀值"  name="id" id="demoReload" autocomplete="off">
+  	   </div>kb/s
+         开始时间：<div class="layui-inline">
+    		<input class="layui-input" name="id" placeholder="请选择时间"   id="demoReload" autocomplete="off">
+  	   </div>
+          结束时间：<div class="layui-inline">
+    		<input class="layui-input" name="id" placeholder="请选择时间"   id="demoReload" autocomplete="off">
+  	   </div>
+    <button class="layui-btn layui-btn-sm" lay-event="add">搜索</button>
+  </div>
+</script>
+          
+<script type="text/javascript" th:src="@{/layui/layui.all.js}"></script>
+<script type="text/javascript" th:src="@{/monitor/speed-list.js}"></script>
+</body>
+</body>
+</html>

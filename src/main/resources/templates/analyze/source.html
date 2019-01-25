@@ -10,15 +10,22 @@
 <script type="text/html" id="toolbarDemo">
   <div class="layui-btn-container">
 		&nbsp;&nbsp;
-	   <div class="layui-inline">
+	   主题：<div class="layui-inline">
     		<input class="layui-input" placeholder="请输入主题"  name="id" id="demoReload" autocomplete="off">
   	   </div>
+ 生产者ID：<div class="layui-inline">
+    		<input class="layui-input" placeholder="请输入生产者ID"  name="id" id="demoReload" autocomplete="off">
+  	   </div>
+ 开始时间：<div class="layui-inline">
+    		<input class="layui-input" placeholder="请选择时间"  name="id" id="demoReload" autocomplete="off">
+  	   </div>
+ 结束时间：<div class="layui-inline">
+    		<input class="layui-input" placeholder="请选择时间"  name="id" id="demoReload" autocomplete="off">
+  	   </div>
 	<button class="layui-btn" data-type="reload">搜索</button>
-    <button class="layui-btn layui-btn-sm" lay-event="topicAdd">新增</button>
-    <button class="layui-btn layui-btn-sm" lay-event="topicDelete">删除</button>
-    <button class="layui-btn layui-btn-sm" lay-event="topicUpdate">修改</button>
   </div>
 </script>
+ 
           
 <script type="text/javascript" th:src="@{/layui/layui.all.js}"></script>
 <script type="text/javascript" th:src="@{/producer/list.js}"></script>

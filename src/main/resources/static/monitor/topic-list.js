@@ -1,4 +1,15 @@
-layui.use('table', function(){
+layui.use(['jquery','layer','laydate','table','form','element'], function(){
+	  
+	  var laydate = layui.laydate;
+	  laydate.render({
+		  elem: '#startTime'
+		  ,type: 'datetime'
+	  });
+	  laydate.render({
+		  elem: '#endTime'
+		  ,type: 'datetime'
+	  });
+	  
 	  var table = layui.table;
 	  table.render({
 	    elem: '#test'
@@ -6,15 +17,17 @@ layui.use('table', function(){
 	    ,toolbar: '#toolbarDemo'
 	    ,title: '用户数据表'
 	    ,cols: [[
-	       {type:'numbers'}
-	      ,{type:'radio'}
-	      ,{field:'ip', title:'生产者IP', width:80, fixed: 'left', unresize: true, sort: true}
-	      ,{field:'topicNames', title:'主题名', width:120, edit: 'text'}
-	      ,{field:'orgName', title:'机构名', width:150, edit: 'text', templet: function(res){
+	       {type:'numbers',width:20}
+	      ,{type:'radio',width:20}
+	      ,{field:'name', title:'主题名', width:80, fixed: 'left', unresize: true, sort: true}
+	      ,{field:'key', title:'主题描述', width:120, edit: 'text'}
+	      ,{field:'length', title:'生产者数(在线/离线)', width:150, edit: 'text', templet: function(res){
 	        return '<em>'+ res.comName +'</em>'
 	      }}
-	      ,{field:'isEnable', title:'是否启用', width:120, edit: 'text'}
-	      ,{field:'status', title:'状态', width:120, edit: 'text'}
+	      ,{field:'ip', title:'消费者数(在线/离线)', width:80, edit: 'text', sort: true}
+	      ,{field:'org', title:'未消费数', width:100}
+	      ,{field:'time', title:'主题消息数(实时)', width:100}
+	      ,{field:'time', title:'消息速度(实时)', width:100}
 	    ]]
 	    ,page: true
 	  });
@@ -23,11 +36,11 @@ layui.use('table', function(){
 	  table.on('toolbar(test)', function(obj){
 	    var checkStatus = table.checkStatus(obj.config.id);
 	    switch(obj.event){
-	      case 'add':
+	      case 'topicAdd':
 	    	 layer.open({
-	    		title:'创建生产者',
+	    		title:'新增主题',
 	        	type:2,
-	        	content:['/action/view?name=producer/detail',0],
+	        	content:['/action/view?name=topic/detail',0],
 	        	area: ['80%', '85%']
 	        });
 	    	 break;

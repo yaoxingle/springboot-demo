@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ViewController {
 	
-	@RequestMapping("/view")
+	@RequestMapping("/action/view")
 	public String forward(HttpServletRequest request) {
 		return request.getParameter("name");
 	}

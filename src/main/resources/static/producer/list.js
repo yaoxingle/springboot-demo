@@ -6,15 +6,15 @@ layui.use('table', function(){
 	    ,toolbar: '#toolbarDemo'
 	    ,title: '用户数据表'
 	    ,cols: [[
-	       {type:'numbers'}
-	      ,{type:'radio'}
-	      ,{field:'ip', title:'生产者IP', width:80, fixed: 'left', unresize: true, sort: true}
-	      ,{field:'topicNames', title:'主题名', width:120, edit: 'text'}
-	      ,{field:'orgName', title:'机构名', width:150, edit: 'text', templet: function(res){
+	       {type:'numbers',width:20}
+	      ,{type:'radio',width:20}
+	      ,{field:'name', title:'主题名', width:80, fixed: 'left', unresize: true, sort: true}
+	      ,{field:'appName', title:'应用名', width:120, edit: 'text'}
+	      ,{field:'comName', title:'公司名', width:150, edit: 'text', templet: function(res){
 	        return '<em>'+ res.comName +'</em>'
 	      }}
-	      ,{field:'isEnable', title:'是否启用', width:120, edit: 'text'}
-	      ,{field:'status', title:'状态', width:120, edit: 'text'}
+	      ,{field:'desc', title:'主题描述', width:80, edit: 'text', sort: true}
+	      ,{field:'type', title:'类型', width:100}
 	    ]]
 	    ,page: true
 	  });
@@ -23,11 +23,11 @@ layui.use('table', function(){
 	  table.on('toolbar(test)', function(obj){
 	    var checkStatus = table.checkStatus(obj.config.id);
 	    switch(obj.event){
-	      case 'add':
+	      case 'topicAdd':
 	    	 layer.open({
-	    		title:'创建生产者',
+	    		title:'新增主题',
 	        	type:2,
-	        	content:['/action/view?name=producer/detail',0],
+	        	content:['/action/view?name=topic/detail',0],
 	        	area: ['80%', '85%']
 	        });
 	    	 break;

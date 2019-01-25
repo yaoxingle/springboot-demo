@@ -9,19 +9,21 @@
  
 <script type="text/html" id="toolbarDemo">
   <div class="layui-btn-container">
-		&nbsp;&nbsp;
+       &nbsp;&nbsp;
 	   <div class="layui-inline">
-    		<input class="layui-input" placeholder="请输入主题"  name="id" id="demoReload" autocomplete="off">
+    		<input class="layui-input" placeholder="请输入主题" name="id" id="demoReload" autocomplete="off">
   	   </div>
-	<button class="layui-btn" data-type="reload">搜索</button>
+    <button class="layui-btn" data-type="reload">搜索</button>
     <button class="layui-btn layui-btn-sm" lay-event="topicAdd">新增</button>
     <button class="layui-btn layui-btn-sm" lay-event="topicDelete">删除</button>
     <button class="layui-btn layui-btn-sm" lay-event="topicUpdate">修改</button>
+	<button class="layui-btn layui-btn-sm" lay-event="topicUpdate">消费者状态</button>
+	<button class="layui-btn layui-btn-sm" lay-event="topicUpdate">订阅主题</button>
   </div>
 </script>
-          
+ 
 <script type="text/javascript" th:src="@{/layui/layui.all.js}"></script>
-<script type="text/javascript" th:src="@{/producer/list.js}"></script>
+<script type="text/javascript" th:src="@{/consumer/list.js}"></script>
 </body>
 </body>
 </html>
